@@ -4,7 +4,6 @@ git clone https://github.com/elaurendeau/dotfiles.git
 cp /home/pi/dotfiles/_vimrc /home/pi/
 git clone --depth=1 https://github.com/Bash-it/bash-it.git /home/pi/bash_it
 /home/pi/bash_it/install.sh
-bash-it enable plugin git
 cd /home/pi/octopi
 sudo chmod 777 /home/pi/octopi/haproxy.cfg
 sudo chmod 777 /home/pi/octopi/smb.conf
