@@ -7,6 +7,10 @@ git clone --depth=1 https://github.com/Bash-it/bash-it.git /home/pi/bash_it
 cd /home/pi/octopi
 sudo chmod 777 /home/pi/octopi/haproxy.cfg
 sudo chmod 777 /home/pi/octopi/smb.conf
+sudo chmod 777 /home/pi/octopi/octopi-network.txt
+sudo mv /boot/octopi-network.txt /boot/octopi-network.old
+sudo cp /home/pi/octopi/octopi-network.txt /boot/octopi-network.txt
+sudo -E vim /boot/octopi-network.txt
 sudo mv /etc/samba/smb.conf /etc/samba/smb.old
 sudo cp /home/pi/octopi/smb.conf /etc/samba/smb.conf
 sudo service smbd restart
