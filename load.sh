@@ -15,10 +15,10 @@ cd /home/pi/octopi
 sudo chmod 777 /home/pi/octopi/haproxy.cfg
 sudo chmod 777 /home/pi/octopi/smb.conf
 sudo chmod 777 /home/pi/octopi/octopi-network.txt
-sudo chmod 777 /home/pi/octopi/wifi-rebooter.sh
+sudo chmod 777 /home/pi/octopi/wifi_rebooter.sh
 
 # verify if we need to restart the wifi every minute
-sudo echo '*/5 *   * * *   root     /home/pi/octopi/wifi_rebooter.sh' >> /etc/contrab
+sudo sh -c "echo '*/5 *   * * *   root     /home/pi/octopi/wifi_rebooter.sh' >> /etc/crontab"
 
 # default wireless config
 sudo mv /boot/octopi-network.txt /boot/octopi-network.old
