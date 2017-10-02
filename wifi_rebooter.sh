@@ -11,7 +11,7 @@ if [ $? != 0 ]
 then
 	echo "$(date): No network connection, restarting wlan0" >> /var/log/wifi_restart.log
 	# Restart the wireless interface
-	sudo ifdown --force wlan0
+	sudo /sbin/ifdown --force wlan0
 	sleep 5
-	sudo ifup --force wlan0
+	sudo /sbin/ifup --force wlan0
 fi
